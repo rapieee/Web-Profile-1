@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+html {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 84, 166, 1) 0%, rgba(132, 189, 201, 1) 90%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+
+
+header {
+    margin-top: -20px;
+    width: 80%;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:
+        "profil profil"
+        "intro intro"
+        "story skill"
+        "edu lang"
+        "sosmed sosmed";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px 20px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.profile-img {
+    margin-top: 90px;
+    background-image: url(/assets/img/Rafie.jpg);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    grid-area: profil;
+    justify-self: center;
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 400ms ease;
+    object-fit: contain;
+}
+
+.profile-img:hover {
+    filter: blur(2px);
+    cursor: not-allowed;
+    transform: scale(0.9);
+}
+
+.panel-intro {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color: white;
+    grid-area: intro;
+    justify-self: center;
+
+}
+
+.panel-intro .intro1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.panel-intro .intro2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.story {
+    grid-area: story;
+}
+
+.skill {
+    grid-area: skill;
+}
+
+.story,
+.project {
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.3);
+    padding: 20px;
+    color: white;
+    background-color: #1e789b;
+    border-radius: 5px;
+}
+
+.skill,
+.education {
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.3);
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.education {
+    grid-area: edu;
+}
+
+.project {
+    grid-area: lang;
+}
+
+.story:hover,
+.project:hover,
+.education:hover,
+.skill:hover {
+    transform: scale(0.95);
+}
+
+.story,
+.project,
+.education,
+.skill {
+    transform: all 800ms ease;
+}
+
+
+/* Panel Sosomed */
+.sosmed {
+    grid-area: sosmed;
+    justify-self: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    width: 400px;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    height: 80px;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: wafe 1s linear infinite;
+    margin-top: 40px;
+}
+
+@keyframes wafe {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    20% {
+        box-shadow: 0 0 20px #16a085;
+    }
+
+    40% {
+        box-shadow: 0 0 20px #27ae60;
+    }
+
+    60% {
+        box-shadow: 0 0 20px #2980b9;
+    }
+
+    80% {
+        box-shadow: 0 0 20px #8e44ad;
+    }
+
+    100% {
+        box-shadow: 0 0 20px #f39c12;
+    }
+
+
+
+}
+
+/* End Panel Sosmed */
+
+@media screen and (max-width: 425px) {
+    .header {
+        margin-top: 10px;
+        width: 50%;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px 20px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .panel-intro {
+        margin-top: -10px;
+        margin-bottom: 30px;
+        color: white;
+        grid-area: intro;
+        justify-self: center;
+    }
+
+    .panel-intro .intro1 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .panel-intro .intro2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .story {
+        padding: -40px;
+        border-radius: 0px;
+    }
+
+    .story p {
+        padding: 20px;
+        border-radius: 0px;
+        text-align: start;
+    }
+    .p-about {
+    margin-top: 10px;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+    }
+
+    .skill,
+    .education {
+        padding: -40px;
+        border-radius: 0px;
+
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sosmed {
+        justify-self: center;
+        width: 300px;
+        display: flex;
+        background-color: white;
+        border-radius: 20px;
+        height: 70px;
+        justify-content: space-evenly;
+        align-items: center;
+        animation: wafe 1s linear infinite;
+        margin-top: 30px;
+    }
+
